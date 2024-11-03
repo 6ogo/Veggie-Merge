@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Leaderboard" class="bg-green-500 text-white" />
+    
+    <TabView selectedIndex="0" class="bg-gray-100">
+        <!-- Daily Scores -->
+        <TabViewItem title="Daily">
+            <ListView items="{{ dailyScores }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item">
+                        <Label text="{{ points }}" class="text-lg" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+
+        <!-- Weekly Scores -->
+        <TabViewItem title="Weekly">
+            <ListView items="{{ weeklyScores }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item">
+                        <Label text="{{ points }}" class="text-lg" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+
+        <!-- Monthly Scores -->
+        <TabViewItem title="Monthly">
+            <ListView items="{{ monthlyScores }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item">
+                        <Label text="{{ points }}" class="text-lg" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+    </TabView>
+</Page>

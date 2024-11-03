@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vegetable-item {
+    width: 50;
+    height: 50;
+    background-color: #f0fdf4;
+    border-radius: 25;
+    border-width: 2;
+    border-color: #22c55e;
+}
+
+.list-group-item {
+    padding: 16;
+    background-color: white;
+    border-bottom-width: 1;
+    border-bottom-color: #e5e7eb;
+}

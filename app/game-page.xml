@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-gray-100">
+    <ActionBar title="Vegetable Merge" class="bg-green-500 text-white" />
+    
+    <GridLayout rows="auto, *, auto" class="p-4">
+        <!-- Score -->
+        <StackLayout row="0" class="p-2">
+            <Label text="{{ 'Score: ' + score }}" class="text-2xl text-center text-green-600 font-bold" />
+        </StackLayout>
+
+        <!-- Game Grid -->
+        <GridLayout row="1" id="gameGrid" class="m-2 bg-white rounded-lg shadow-lg">
+            <Repeater items="{{ vegetables }}">
+                <Repeater.itemTemplate>
+                    <GridLayout class="vegetable-item" translateX="{{ position.x }}" translateY="{{ position.y }}">
+                        <Label text="{{ type }}" class="text-center text-green-700 font-bold" />
+                    </GridLayout>
+                </Repeater.itemTemplate>
+            </Repeater>
+        </GridLayout>
+
+        <!-- Controls -->
+        <StackLayout row="2" class="p-2">
+            <Button text="New Vegetable" tap="{{ addVegetable }}" class="bg-green-500 text-white rounded-lg p-4 font-bold" />
+        </StackLayout>
+    </GridLayout>
+</Page>
